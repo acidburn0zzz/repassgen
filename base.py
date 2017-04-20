@@ -32,6 +32,14 @@ class Base:
                 return {'err': 'Base file has wrong format! Please fix or delete it!', 'dat': ''}
             return {'err': '', 'dat': data}
 
+    def length(self):
+        data_obj = self.load()
+        if not data_obj['err']:
+            data = data_obj['dat']
+            length = reduce(lambda acc, item: acc + len(item), data, 0)
+            return {'err': '', 'dat': length}
+        return data_obj
+
     def save(self, structure):
         if not Path(self.base_file).is_file():
             self.create()
@@ -71,11 +79,3 @@ class Base:
                         else:
                             structure[head] = {[content]}
         return {'err': '', 'dat': structure}
-
-    def length(self):
-        data_obj = self.load()
-        if not data_obj['err']:
-            data = data_obj['dat']
-            length = reduce(lambda acc, item: acc + len(item), data, 0)
-            return {'err': '', 'dat': length}
-        return data_obj
