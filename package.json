@@ -1,0 +1,29 @@
+{
+  "name": "repassgen",
+  "version": "0.0.1",
+  "description": "'REadable PASSwords GENerator'",
+  "bin": {
+    "repassgen": "dist/bin/repassgen.js"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iskaldvind/repassgen.git"
+  },
+  "author": "iskaldvind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iskaldvind/repassgen/issues"
+  },
+  "homepage": "https://github.com/iskaldvind/repassgen#readme",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  }
+}
