@@ -1,6 +1,6 @@
 {
   "name": "repassgen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "'REadable PASSwords GENerator'",
   "bin": {
     "repassgen": "dist/bin/repassgen.js"
