@@ -1,13 +1,13 @@
 {
   "name": "repassgen",
-  "version": "0.0.3",
+  "version": "0.0.18",
   "description": "'REadable PASSwords GENerator'",
   "bin": {
     "repassgen": "dist/bin/repassgen.js"
   },
   "scripts": {
     "babel-node": "babel-node",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline --copy-files",
     "prepublish": "npm run build",
     "eslint": "eslint src"
   },
@@ -21,6 +21,9 @@
     "url": "https://github.com/iskaldvind/repassgen/issues"
   },
   "homepage": "https://github.com/iskaldvind/repassgen#readme",
+  "dependencies": {
+    "command-line-args": "*"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
@@ -29,6 +32,7 @@
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-import": "*",
-    "babel-eslint": "*"
+    "babel-eslint": "*",
+    "command-line-args": "*"
   }
 }
